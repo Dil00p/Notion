@@ -118,12 +118,11 @@ function clock() {
 var today = new Date();
 var hour = zeros(twelveHour(today.getHours()));
 var minutes = zeros(today.getMinutes());
-var seconds = zeros(today.getSeconds());
 if(today.getHours() >=12){
-    seconds+=" pm"
+    +=" pm"
 }
 else{
-    seconds+=" am"
+    +=" am"
 }
 hrs = today.getHours();
 if (hrs < 12)
@@ -136,7 +135,6 @@ if (hrs < 12)
 document.getElementById('greet').innerHTML = greet;
 document.getElementById('hour').innerHTML = hour;
 document.getElementById('min').innerHTML = minutes;
-document.getElementById('sec').innerHTML = seconds;
 }
 
 function twelveHour(hour) {
